@@ -1,0 +1,166 @@
+@font-face {
+ font-family: 'Gluten';
+ src: url(../fonts/Gluten-VariableFont_wght.ttf);
+}
+
+/*
+body
+{
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+*/
+
+.base
+{
+  width: 300px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.throat
+{
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(187,59,55,1) 41%,
+  rgba(237,85,83,1) 55%, rgba(231,115,190,1) 100%);
+  width: 300px;
+  height: 600px;
+  animation: breathe 3s infinite ease;
+}
+
+@keyframes breathe
+{  0%
+  {
+    transform: scale(1);
+  }
+
+  50%
+  {
+    transform: scale(2)
+  }
+
+  100%
+  {
+    transform: scale(1);
+  }
+}
+
+.mouth
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/mouth.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+}
+
+.titleText
+{
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  font-family: "Gluten";
+  position: relative;
+  top: -95px;
+  text-rendering: geometricPrecision;
+  animation: gluten 5s alternate infinite ease, rotate 5s infinite;
+}
+
+.titleSub
+{
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  font-family: "Gluten";
+  position: relative;
+  top: 170px;
+  text-rendering: geometricPrecision;
+  animation: gluten 5s alternate infinite ease, rotate 5s infinite;
+}
+
+@keyframes gluten {
+    0%     {font-variation-settings: "wght" 800}
+    25%     {font-variation-settings: "wght" 600}
+    50%     {font-variation-settings: "wght" 800}
+    75%     {font-variation-settings: "wght" 600}
+    100%   {font-variation-settings: "wght" 800}
+}
+
+@keyframes rotate {
+    0%     {transform: rotate(0deg); }
+    25%    {transform: rotate(25deg); }
+    50%    {transform: rotate(0deg); }
+    75%     {transform: rotate(-25deg); }
+    100%   {transform: rotate(0deg); }
+}
+
+.jaw
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.jaw:hover .teethTop
+{
+  transform:translateY(-240px);
+}
+
+.jaw:hover .teethBot
+{
+  transform:translateY(240px);
+}
+
+.teethTop
+{
+  position: relative;
+  top: 0px;
+  width: 300px;
+  height: 300px;
+  background-image: url(../images/teethup.png);
+  transition: 0.2s all
+}
+
+.teethBot
+{
+  position: relative;
+  top: 0px;
+  width: 300px;
+  height: 300px;
+  background-image: url(../images/teethlow.png);
+  transition: 0.2s all
+}
+
+.gumText
+{
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+  font-family: 'Barriecito', cursive;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.prod
+{
+  text-align: center;
+  color: white;
+  font-size: 4em;
+  font-family: 'Barriecito', cursive;
+  position: relative;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
